@@ -55,6 +55,8 @@ if branches:
           ci = i
         i = i + 1
 
+branches = [x.replace('*', '').strip() for x in branches]
+
 def get_next_branch(branches, ci):
     if(ci+1 < len(branches)):
         return branches[ci+1]
